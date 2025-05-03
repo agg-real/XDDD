@@ -70,8 +70,6 @@ rootPart.Anchored = true
 rootPart.Anchored = true
 task.wait(0.1)
 rootPart.Anchored = true
-if v == nil then
- rootPart.CFrame = CFrame.new(0,0,0)
     end 
 end
 end
