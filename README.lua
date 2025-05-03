@@ -64,7 +64,7 @@ local teleportCFrame = baseCFrame * offset
         rootPart.CFrame = teleportCFrame
 rootPart.Anchored = true
 task.wait(0.4)
- rootPart.CFrame = teleportCFrame
+ rootPart.CFrame = teleportCFrame * CFrame.Angles(0, math.rad(90), 0)
 rootPart.Anchored = true
         fireproximityprompt(v)
 rootPart.Anchored = true
