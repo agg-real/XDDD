@@ -20,7 +20,7 @@ local function fireproximityprompt(Obj, Amount, Skip)
 end
 for i, v in pairs(game:GetService("Workspace").Map.spawnPoints.Box:GetDescendants()) do
     if v:IsA("ProximityPrompt") then 
-    plr.Character.Torso.CFrame = v.Parent.CFrame
+    game.Players.LocalPlayer.Character.Torso.CFrame = v.Parent.CFrame
         fireproximityprompt(v,1,false)
     end 
 end
