@@ -62,9 +62,14 @@ local baseCFrame = v.Parent.CFrame
 local offset = CFrame.new(0, -5.15, 0)
 local teleportCFrame = baseCFrame * offset 
         rootPart.CFrame = teleportCFrame
+rootPart.Anchored = true
 task.wait(0.4)
+ rootPart.CFrame = teleportCFrame
+rootPart.Anchored = true
         fireproximityprompt(v)
+rootPart.Anchored = true
 task.wait(0.1)
+rootPart.Anchored = true
     end 
 end
 end
