@@ -69,9 +69,10 @@ task.wait(0.1)
 end
 end
 end
-            elseif ex == false then
+			end
+           if ex == false then
 rootPart.Anchored = false
-            end
+			end
 		end
 end)
 
