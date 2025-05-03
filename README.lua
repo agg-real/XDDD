@@ -61,7 +61,7 @@ for i, v in pairs(parts:GetDescendants()) do
 local baseCFrame = v.Parent.CFrame
 local offset = CFrame.new(0, -6, 0)
 local teleportCFrame = baseCFrame * offset 
-    local rootPart = player.Character:FindFirstChild("HumanoidRootPart")
+    local rootPart = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
         rootPart.CFrame = teleportCFrame
 task.wait(0.1)
         fireproximityprompt(v)
