@@ -18,9 +18,14 @@ local function fireproximityprompt(Obj, Amount, Skip)
         error("userdata<ProximityPrompt> expected")
     end
 end
-for i, v in pairs(game:GetService("Workspace").Map.spawnPoints.Box:GetDescendants()) do
+for i, parts in pairs(game:GetService("Workspace").Map.spawnPoints.Box:GetChildren()) do
+if parts:IsA("BasePart") then
+for i, v in pairs(parts:GetDescendants()) do
+
     if v:IsA("ProximityPrompt") then 
     game.Players.LocalPlayer.Character.Torso.CFrame = v.Parent.CFrame
-        fireproximityprompt(v,1,false)
+        fireproximityprompt(v,2,false)
     end 
+end
+end
 end
