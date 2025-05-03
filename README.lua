@@ -61,7 +61,7 @@ for i, v in pairs(parts:GetDescendants()) do
 local baseCFrame = v.Parent.CFrame
 local offset = CFrame.new(0, -4.15, 0)
 local teleportCFrame = baseCFrame * offset 
-        rootPart.CFrame = teleportCFrame
+        rootPart.CFrame = teleportCFrame * CFrame.Angles(0, math.rad(90), 0)
 rootPart.Anchored = true
 task.wait(0.4)
  rootPart.CFrame = teleportCFrame * CFrame.Angles(0, math.rad(90), 0)
