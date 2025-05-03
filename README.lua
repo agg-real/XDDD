@@ -49,7 +49,7 @@ OrionLib:MakeNotification({
 	Time = 5
 })
 	end)
-
+    local rootPart = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
 task.spawn(function()
     while task.wait() do
 if ex then
@@ -61,7 +61,6 @@ for i, v in pairs(parts:GetDescendants()) do
 local baseCFrame = v.Parent.CFrame
 local offset = CFrame.new(0, -6, 0)
 local teleportCFrame = baseCFrame * offset 
-    local rootPart = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
         rootPart.CFrame = teleportCFrame
 task.wait(0.1)
         fireproximityprompt(v)
@@ -71,7 +70,6 @@ end
 end
 end
             elseif ex == false then
-   local rootPart = player.Character:FindFirstChild("HumanoidRootPart")
 rootPart.Anchored = false
             end
 		end
