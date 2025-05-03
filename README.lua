@@ -33,6 +33,19 @@ OrionLib:MakeNotification({
       		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
   	end    
 })
+
+Tab:AddButton({
+	Name = "Включить anti-afk",
+	Callback = function()
+OrionLib:MakeNotification({
+	Name = "Реквариваем Anti-afk",
+	Content = "Working!",
+	Image = "rbxassetid://18579698048",
+	Time = 5
+})
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/hassanxzayn-lua/Anti-afk/main/antiafkbyhassanxzyn"))()
+  	end    
+})
 local ez =Tab:AddToggle({
     Name = "Фармилка боксиков",
     Default = ex,
