@@ -53,27 +53,23 @@ OrionLib:MakeNotification({
 task.spawn(function()
     while task.wait() do
 if ex then
-rootPart.Anchored = true
 for i, parts in pairs(game:GetService("Workspace").Map.spawnPoints.Box:GetChildren()) do
 if parts:IsA("BasePart") then
 for i, v in pairs(parts:GetDescendants()) do
     if v:IsA("ProximityPrompt") then 
 local baseCFrame = v.Parent.CFrame
 task.wait(0.35)
-local offset = CFrame.new(0, -4.255, 0)
+local offset = CFrame.new(0, 0, 0)
 local teleportCFrame = baseCFrame * offset 
         rootPart.CFrame = teleportCFrame
 task.wait(0.15)
         fireproximityprompt(v)
-rootPart.Anchored = true
-
     end 
 end
 end
 end
 			end
            if ex == false then
-rootPart.Anchored = false
 			end
 		end
 end)
