@@ -59,10 +59,10 @@ if parts:IsA("BasePart") then
 for i, v in pairs(parts:GetDescendants()) do
     if v:IsA("ProximityPrompt") then 
 local baseCFrame = v.Parent.CFrame
-local offset = CFrame.new(0, -4.5, 0)
+local offset = CFrame.new(0, -5.15, 0)
 local teleportCFrame = baseCFrame * offset 
         rootPart.CFrame = teleportCFrame
-task.wait(0.1)
+task.wait(0.4)
         fireproximityprompt(v)
 task.wait(0.1)
     end 
