@@ -8,7 +8,7 @@ local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local HttpService = game:GetService("HttpService")
 
-local Window = OrionLib:MakeWindow({Name = "Heaven hub", HidePremium = false, SaveConfig = true})
+local Window = OrionLib:MakeWindow({Name = "Heaven hub(Beta)", HidePremium = false, SaveConfig = true})
 local Tab = Window:MakeTab({Name = "Главная", Icon = "rbxassetid://90323304631053"})
 local ex = false
 local co = false
@@ -52,6 +52,17 @@ local ez =Tab:AddToggle({
     Callback = function(value)
         ex = value
     end
+})
+Tab:AddButton({
+	Name = "Телепортироватся к боссу (если он есть)",
+	Callback = function()
+game.Players.LocalPlayer.Character.Torso.CFrame = workspace.Victim:FindFirstChild("Hakari").Torso.CFrame
+  	end    
+})
+Tab:AddButton({
+	Name = "Если заспавнился босс включите fling в Infinite Yield и телепортируетесь много раз",
+	Callback = function()
+  	end    
 })
 task.spawn(function()
 task.wait(1)
